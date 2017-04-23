@@ -1,4 +1,5 @@
 # Meat Fest Admin Editing Suite
+**A desktop application for editing the Meat Fest website remotely. Runs on Node.js and Electron.**
 
 ## To Use
 
