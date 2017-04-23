@@ -1,0 +1,62 @@
+h1 {
+	font-family: 'Rock Salt', cursive;
+    text-align: center;
+}
+
+form {
+	width: 100%;
+}
+
+input {
+	display: block;
+	width: 70%;
+	max-width: 400px;
+	height: 40px;
+    padding: 6px 12px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9dadc;
+    border-radius: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 15px;
+}
+
+#log-in {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 14px;
+    line-height: 1.5;
+    border-radius: 500px;
+    padding: 7px 35px;
+    background-color: #2ebd59;
+    color: #fff;
+    border-width: 0;
+    letter-spacing: 1.2px;
+    min-width: 130px;
+    width: 70%;
+    max-width: 400px;
+    text-transform: uppercase;
+    white-space: normal;
+    margin-bottom: 0;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+}
+
+#close-window {
+	position: fixed;
+	right: 6px;
+	top: 6px;
+	background-color: red;
+	color: #fff;
+	border-radius: 0px;
+	border: none;
+	padding: 5px;
+	max-width: 20px;
+	max-height: 20px;
+}

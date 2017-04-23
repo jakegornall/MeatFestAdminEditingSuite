@@ -13,7 +13,13 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({
+    title: "Meat Fest Admin Editing Suite",
+    width: 800,
+    height: 400,
+    resizable: false,
+    frame: false
+  })
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
