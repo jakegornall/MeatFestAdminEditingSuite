@@ -10,6 +10,10 @@
         <script src="./scripts/jquery-3.2.1.min.js"></script>
         <script src="./scripts/underscore-min.js"></script>
         <script src="./scripts/backbone-min.js"></script>
+        <script src="./scripts/Backbone_App_Scripts/EventModel.js"></script>
+        <script src="./scripts/Backbone_App_Scripts/EventCollection.js"></script>
+        <script src="./scripts/Backbone_App_Scripts/EventView.js"></script>
+        <script src="./scripts/Backbone_App_Scripts/App.js"></script>
 
         <!-- Insert this line after script imports -->
         <script>if (window.module) module = window.module;</script>
@@ -17,7 +21,85 @@
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./styles/style.css" />
     <body>
-        <h1>Main.html</h1>
+        <table id="add-event-table">
+                <thead>
+                    <tr>
+                        <th class="table-title" colspan="4">ADD NEW EVENT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input id="new-date" type="date" placeholder="Date" /></td>
+                        <td><input id="new-name" type="text" placeholder="Event Name" /></td>
+                        <td><input id="new-charity" type="text" placeholder="Charity" /></td>
+                        <td><input id="new-goal" type="number" min="1" placeholder="Goal" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <textarea id="new-desc" placeholder="Event Description"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><button id="add-event-btn">ADD EVENT</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+
+            <div class="container-fluid">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="table-title" colspan="7">EVENTS (double click to edit each field)</th>
+                        </tr>
+                        <tr id="event-table-headers" style="background-color: #555555; height: 15px">
+                            <th>DELETE</th>
+                            <th>DATE</th>
+                            <th>NAME</th>
+                            <th>CHARITY</th>
+                            <th>GOAL</th>
+                            <th>FUNDS RAISED</th>
+                            <th>DONORS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="events-table-body"></tbody>
+                </table>
+            </div>
+
+            <footer>
+                <h3>This is the footer.</h3>
+            </footer>
+
+            <script type="text/template" id="event-template">
+                <td>
+                    <label class="delete">X</label>
+                </td>
+                <td>
+                    <label class="date"><%- date %></label>
+                    <input class="date-edit" type="date" value="<%- date %>" />
+                </td>
+                <td>
+                    <label class="name"><%- name %></label>
+                    <input class="name-edit" type="text" value="<%- name %>" />
+                </td>
+                <td>
+                    <label class="charity"><%- charity %></label>
+                    <input class="charity-edit" type="text" value="<%- charity %>" />
+                </td>
+                <td>
+                    <label class="goal">$<%- goal %></label>
+                    <input class="goal-edit" type="number" min="1" value="<%- goal %>" />
+                </td>
+                <td>
+                    <label class="fundsRaised">$<%- fundsRaised %></label>
+                    <input class="fundsRaised-edit" type="number" min="0" value="<%- fundsRaised %>" />
+                </td>
+                <td>
+                    <label class="donors"><%- donors %></label>
+                    <input class="donors-edit" type="number" min="0" value="<%- donors %>" />
+                </td>
+            </script>
+        </main>
     </body>
     <script>
         // You can also require other files to run in this process

@@ -20,8 +20,6 @@ $("#login-form").submit(function(e) {
             	// Create the browser window for the main editing suite.
 				AppWindow = new BrowserWindow({
 					title: "Meat Fest Admin Editing Suite",
-				    width: 800,
-				    height: 400,
 				    resizable: false,
 				    frame: false
 				})
@@ -33,8 +31,10 @@ $("#login-form").submit(function(e) {
     				slashes: true
   				}))
 
+  				AppWindow.maximize();
+
   				// Open the DevTools.
-  				// AppWindow.webContents.openDevTools()
+  				AppWindow.webContents.openDevTools()
 
   				// Emitted when the window is closed.
   				AppWindow.on('closed', function () {

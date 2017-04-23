@@ -57,6 +57,11 @@ input {
 	border-radius: 0px;
 	border: none;
 	padding: 5px;
-	max-width: 20px;
-	max-height: 20px;
+	width: 30px;
+	height: 30px;
+	transition: background-color .15s;
+}
+#close-window:hover {
+	background-color: darkred;
+	cursor: pointer;
 }
